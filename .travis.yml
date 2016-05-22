@@ -1,0 +1,23 @@
+
+language: bash
+services: docker
+
+env:
+  - PROJECT=universal-pddl-parser
+  - PROJECT=fs
+
+install:
+  - git clone https://github.com/aig-upf/docker-images.git ~/docker-images
+
+before_script:
+  - env | sort
+  - cd "$PROJECT"
+  - image="aigupf:$PROJECT"
+
+script:
+  - docker build -t "$image" .
+  - ~/docker-images/test/run.sh "$image"
+
+after_script:
+  - docker images
+

@@ -6,8 +6,6 @@ MAINTAINER Guillem Francès guillem.frances@upf.edu
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 
-ENV LANG en_US.UTF-8
-
 ENV BASE_DIR "${HOME}/projects"
 ENV LAPKT_PATH "${BASE_DIR}/lapkt"
 ENV LAPKT2_PATH "${LAPKT_PATH}/aptk2"
@@ -19,6 +17,8 @@ ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:${LAPKT2_PATH}/lib
 ENV FD_AIG_PATH "${HOME}/projects/downward/downward-aig"
 ENV PYTHONPATH "${FD_AIG_PATH}/src/translate:$PYTHONPATH"
 
+# Create required directories
+RUN mkdir -p $BASE_DIR && mkdir -p ~/local
 WORKDIR $BASE_DIR
 
 # install basic tools
@@ -33,17 +33,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 	libboost-dev \
 	libgecode41v5 \
     && rm -rf /var/lib/apt/lists/*
-
-
-# Create required directories
-RUN mkdir -p $BASE_DIR && mkdir -p ~/local
-
-#################################
-# Install & build the universal PDDL parser
-#################################
-RUN git clone https://github.com/aig-upf/universal-pddl-parser.git \
-	&& cd universal-pddl-parser \
-	&& scons
 
 
 #################################
