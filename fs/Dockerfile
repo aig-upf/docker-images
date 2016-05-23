@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 	ca-certificates \
 	curl \
 	mercurial \
+	less \
 	libboost-program-options-dev libboost-filesystem-dev libboost-system-dev \
 	libboost-chrono-dev libboost-timer-dev libboost-serialization-dev \
     && rm -rf /var/lib/apt/lists/*
