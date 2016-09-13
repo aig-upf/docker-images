@@ -1,5 +1,7 @@
 # FS Docker Image
 
+[![](https://images.microbadger.com/badges/image/aigupf/fs.svg)](https://microbadger.com/images/aigupf/fs "")
+
 This directory contains the Docker definition for the image of the [FS Planner](https://github.com/aig-upf/fs).
 
 
