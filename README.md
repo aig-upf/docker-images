@@ -4,4 +4,5 @@ This repository contains the definitions of the docker images maintained by the 
 So far images for the following projects are created:
 
 * The [FS Functional STRIPS Planner](/fs/README.md).
+* The [PROBE Planner](/probe/README.md).
 
