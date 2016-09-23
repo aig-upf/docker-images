@@ -25,7 +25,7 @@ Additionally, the image also features:
 Each of the previous tools lies on a separate subdirectory under `/root/projects`.
 
 
-## Usage
+## Basic Usage
 In order to use the docker images, you need to [have Docker installed on your machine](https://docs.docker.com/engine/installation).
 Once that is done, you can pull the image with
 
@@ -44,3 +44,6 @@ and use any of the provided tools, e.g.
 ```shell
 ./pyperplan/src/pyperplan.py planning-researchers-classical-domains/classical/blocks/probBLOCKS-6-0.pddl
 ```
+
+
+## Advanced Usage
