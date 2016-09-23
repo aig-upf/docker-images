@@ -48,3 +48,36 @@ and use any of the provided tools, e.g.
 
 
 ## Advanced Usage
+
+
+Assuming we have, say, some benchmarks on a `~/benchmarks` directory on the host machine, and we want to run some planner
+in the starter kit on those benchmarks.
+We can start the docker container [mounting the desired directory](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume)
+as follows:
+
+```shell
+docker run -it -v ~/benchmarks:/root/projects/benchmarks aigupf/starter-kit
+```
+
+and the desired benchmarks will be accessible under `/root/projects/benchmarks`.
+
+Alternatively, we can use the same technique in order to have some planner output its results to a directory from the host machine:
+
+```shell
+docker run -it -v ~/output:/root/projects/output aigupf/starter-kit
+./pyperplan/src/pyperplan.py planning-researchers-classical-domains/classical/blocks/probBLOCKS-6-0.pddl > ./output/
+```
+
+which lets us work with the output from the host machine
+
+```shell
+$ cat ~/output/out.txt 
+2016-09-23 13:31:56,345 INFO     Found domain /root/projects/planning-researchers-classical-domains/classical/blocks/domain.pddl
+2016-09-23 13:31:56,350 INFO     using search: breadth_first_search
+2016-09-23 13:31:56,351 INFO     using heuristic: None
+```
+
+
+## Extending the image
+
+
