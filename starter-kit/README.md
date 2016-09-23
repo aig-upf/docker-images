@@ -15,6 +15,7 @@ As of now, the image features the following planners:
 * The [Mercury](https://helios.hud.ac.uk/scommv/IPC-14/repo_planners/Mercury-fixed.zip) planner, namely, the patched version that can be downloaded
 from the [IPC'14 website](https://helios.hud.ac.uk/scommv/IPC-14/errPlan.html).
 * The [PROBE](https://github.com/aig-upf/probe) planner.
+* The [LAPKT](http://lapkt.org/) planning toolkit.
 
 Additionally, the image also features:
 
