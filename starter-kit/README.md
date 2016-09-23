@@ -3,7 +3,7 @@
 [![](https://images.microbadger.com/badges/image/aigupf/starter-kit.svg)](https://microbadger.com/images/aigupf/starter-kit "")
 
 This directory contains the Docker definition for an image 
-with a number of planners, planning domains and planning tools ready to be used.
+with a number of planners, planning domains and planning tools compiled and ready to be used.
 
 
 ## Available Tools
