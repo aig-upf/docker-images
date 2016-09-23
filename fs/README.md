@@ -7,9 +7,7 @@ This directory contains the Docker definition for the image of the [FS Planner](
 
 
 ## Usage
-In order to use the docker images, you need to have Docker installed on your machine.
-If you still don't, you'll need to follow a few easy [Docker installation steps](https://docs.docker.com/engine/installation).
-
+In order to use the docker images, you need to [have Docker installed on your machine](https://docs.docker.com/engine/installation).
 Once that is done, you can pull the image with
 
 ```shell
