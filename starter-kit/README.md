@@ -50,10 +50,8 @@ and use any of the provided tools, e.g.
 ## Advanced Usage
 
 
-Assuming we have, say, some benchmarks on a `~/benchmarks` directory on the host machine, and we want to run some planner
-in the starter kit on those benchmarks.
-We can start the docker container [mounting the desired directory](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume)
-as follows:
+Assume we have, say, some benchmarks on a `~/benchmarks` directory on the host machine, and we want to run some planner in the starter kit on those benchmarks.
+We can start the docker container [mounting the desired directory](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume) as follows:
 
 ```shell
 docker run -it -v ~/benchmarks:/root/projects/benchmarks aigupf/starter-kit
@@ -75,9 +73,10 @@ $ cat ~/output/out.txt
 2016-09-23 13:31:56,345 INFO     Found domain /root/projects/planning-researchers-classical-domains/classical/blocks/domain.pddl
 2016-09-23 13:31:56,350 INFO     using search: breadth_first_search
 2016-09-23 13:31:56,351 INFO     using heuristic: None
+[...]
 ```
 
 
 ## Extending the image
-
+_Work in Progress_
 
